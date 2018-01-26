@@ -169,7 +169,7 @@ function restartDaemon()
 {
 	print_r(exec('/var/ALQO/alqo-cli -datadir=/var/ALQO/data stop'));
 	sleep(10);
-	print_r(exec('sudo /var/ALQO/alqod -datadir=/var/ALQO/data | exit'));
+	print_r(exec('sudo /var/ALQO/alqod -datadir=/var/ALQO/data -listen=0 | exit'));
 	die();
 }
 
